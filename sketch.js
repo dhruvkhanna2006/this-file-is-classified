@@ -1,31 +1,39 @@
-var player1;
-var background;
-var
+
+var bg,character,mummy,monster,Vampire;
+var bgimg,characterimg,mummyimg,monsterimg,Vampireimg;
+
 
 function preload(){
-bg=loadimg("129145.jpg");
-skeleton=loadimg("game_charecter-removebg-preview.png");
-hulk=loadimg("hulk-remover-preview.png");
-mummy=loadimg("mummy-remover-preview.png");
-vampier=loadimg("vampier7-remover-preview.png");
+bgimg=loadImage("images/bg.jpg");
+characterimg=loadImage("images/character.png");
+monsterimg=loadImage("images/monster.png");
+mummyimg=loadImage("images/mummy.png");
+Vampireimg=loadImage("images/Vampire.png");
 }
 
 function setup(){
-createCanvas(windoWith,windowHieght);
+createCanvas(750,1000);
 
-players=createSprite();
-players.addAnimation("players",game_charecter-removebg-prview.png);
-players.scale=1;
+bg=createSprite(750,100,10,60);
+bg.addImage(bgimg);
+bg.scale=1;
 
-playerh=createSprite();
-playerh.addAnimation("playerh",hulk-remover-prveiw.png);
-playerh.scale=1;
+monster=createSprite(650,350,10,10);
+monster.addImage(monsterimg);
+monster.scale=0.5;
 
-playerm=createSprite();
-playerm.addAniation("playerm",mummy-remover-preview.png)
-playerm.scale=1;
+mummy=createSprite(300,20,10,10);
+mummy.addImage(mummyimg)
+mummy.scale=1;
 
-playerv=createSprite();
-playerv=addAnimation("players",vampier7-remover-preview.png);
-playerv.scale=1;
+Vampire=createSprite(290,80,10,10);
+Vampire.addImage(Vampireimg);
+Vampire.scale=1;
+
+character=createSprite(469,30,19,19);
+character.addImage(characterimg);
+character.scale=1;
+}
+function draw(){
+    drawSprites()
 }
